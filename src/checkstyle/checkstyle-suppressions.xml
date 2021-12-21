@@ -107,4 +107,6 @@
 	<suppress files="sockjs[\\/]transport[\\/]TransportType" checks="JavadocVariable" />
 	<suppress files="src[\\/]test[\\/]java[\\/]org[\\/]springframework[\\/]web[\\/]reactive[\\/]protobuf[\\/].*" checks=".*" />
 
+<!--	跳过spring-example代码检查-->
+	<suppress files="[\\/]spring-example[\\/]" checks="[a-zA-Z0-9]*"/>
 </suppressions>
