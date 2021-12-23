@@ -57,7 +57,14 @@ public class CompilerConventionsPlugin implements Plugin<Project> {
 		);
 		COMPILER_ARGS = new ArrayList<>();
 		COMPILER_ARGS.addAll(commonCompilerArgs);
-		//警告-->报错??
+		/**
+		 * https://docs.oracle.com/en/java/javase/17/docs/specs/man/javac.html
+		 * https://docs.oracle.com/en/java/javase/17/docs/specs/man/javadoc.html
+		 *
+		 * -Werror
+		 * Terminates compilation when warnings occur.
+		 * Reports an error if any warnings occur
+		 */
 //		COMPILER_ARGS.addAll(Arrays.asList(
 //				"-Xlint:varargs", "-Xlint:fallthrough", "-Xlint:rawtypes", "-Xlint:deprecation",
 //				"-Xlint:unchecked", "-Werror"
