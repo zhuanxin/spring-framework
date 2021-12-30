@@ -44,9 +44,14 @@ final class LogAdapter {
 
 	private static final String SLF4J_API = "org.slf4j.Logger";
 
-
+	/**
+	 * 选取的log api
+	 */
 	private static final LogApi logApi;
 
+	/**
+	 * 根据class是否存在，选取使用的log api
+	 */
 	static {
 		if (isPresent(LOG4J_SPI)) {
 			if (isPresent(LOG4J_SLF4J_PROVIDER) && isPresent(SLF4J_SPI)) {

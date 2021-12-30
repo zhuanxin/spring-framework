@@ -335,6 +335,10 @@ configure([rootProject] + javaProjects) { project ->
 		configDir = rootProject.file("src/checkstyle")
 	}
 
+	checkstyleMain {
+		enabled = gradle.startParameter.taskNames.contains('checkstyleMain')
+	}
+
 	dependencies {
 		testCompile("org.junit.jupiter:junit-jupiter-api")
 		testCompile("org.junit.jupiter:junit-jupiter-params")

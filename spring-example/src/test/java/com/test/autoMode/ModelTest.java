@@ -36,7 +36,7 @@ public class ModelTest {
 	 * 包括实例化、或者一些高级特性
 	 */
 	@Test
-	public void defaultModel(){
+	public void defaultModel() {
 		AnnotationConfigApplicationContext
 				context = new AnnotationConfigApplicationContext();
 		context.register(ModelConfig.class);
@@ -55,14 +55,14 @@ public class ModelTest {
 	 * 如果有多个再name
 	 */
 	@Test
-	public void autowiredModel(){
+	public void autowiredModel() {
 		AnnotationConfigApplicationContext
 				context = new AnnotationConfigApplicationContext();
 		context.scan("com.test.autoModel.inject");
 		context.refresh();
 		//singletonObjects.get("f")
-		I i =context.getBean(F.class).getI();
-		log.debug("i==[{}]",i);
+		I i = context.getBean(F.class).getI();
+		log.debug("i==[{}]", i);
 
 		//K k = context.getBean(F.class).getK();
 	}
@@ -74,7 +74,7 @@ public class ModelTest {
 	 * 具体需要看spring源码内部有没有对他做解析
 	 */
 	@Test
-	public void orderModel(){
+	public void orderModel() {
 		AnnotationConfigApplicationContext
 				context = new AnnotationConfigApplicationContext();
 		context.scan("com.test.autoModel.order");
@@ -91,7 +91,7 @@ public class ModelTest {
 	 * spring优先选用supplier
 	 */
 	@Test
-	public void staticsModel(){
+	public void staticsModel() {
 		AnnotationConfigApplicationContext
 				context = new AnnotationConfigApplicationContext();
 		//context.scan("com.test.autoModel.statics");
@@ -103,8 +103,6 @@ public class ModelTest {
 		beanDefinition.setBeanClass(A.class);
 
 
-//
-
 		//不需要存在spring容器当中
 		//SupplierFactory supplierFactory = new SupplierFactory();
 		beanDefinition.setInstanceSupplier(SupplierFactory::getObject);
@@ -112,7 +110,7 @@ public class ModelTest {
 		beanDefinition.setFactoryBeanName("objectFactory");
 		beanDefinition.setFactoryMethodName("instanceObject");
 
-		context.registerBeanDefinition("a",beanDefinition);
+		context.registerBeanDefinition("a", beanDefinition);
 		context.refresh();
 	}
 
@@ -121,7 +119,7 @@ public class ModelTest {
 	 * 测试lookup
 	 */
 	@Test
-	public void lookupModel(){
+	public void lookupModel() {
 		AnnotationConfigApplicationContext
 				context = new AnnotationConfigApplicationContext();
 		context.scan("com.test.autoModel.lookup");
@@ -137,7 +135,7 @@ public class ModelTest {
 	 * 测试 dependsOn的作用
 	 */
 	@Test
-	public void dependsOnModel(){
+	public void dependsOnModel() {
 		AnnotationConfigApplicationContext
 				context = new AnnotationConfigApplicationContext();
 		context.scan("com.test.autoModel.dependsOn");
