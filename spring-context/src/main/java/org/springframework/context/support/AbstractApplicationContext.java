@@ -598,6 +598,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		}
 
 		// Initialize any placeholder property sources in the context environment.
+		//初始化属性（拓展点）
 		initPropertySources();
 
 		// Validate that all properties marked as required are resolvable:
