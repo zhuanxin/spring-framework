@@ -185,6 +185,7 @@ final class PostProcessorRegistrationDelegate {
 			}
 			else if (beanFactory.isTypeMatch(ppName, PriorityOrdered.class)) {
 				// PriorityOrdered 接口的，实例化
+				//保证优先级高的先实例化、先执行（可能对优先级低的做了修改）
 				priorityOrderedPostProcessors.add(beanFactory.getBean(ppName, BeanFactoryPostProcessor.class));
 			}
 			else if (beanFactory.isTypeMatch(ppName, Ordered.class)) {
