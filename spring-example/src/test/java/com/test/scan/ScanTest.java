@@ -9,7 +9,7 @@ import com.test.scan.util.MyBeanNameGenerator;
 import com.test.scan.util.MySpringInterfaceScaner;
 import com.test.scan.util.ScanBeanDefinitionRegistyPostProcessor;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.annotation.Annotation;

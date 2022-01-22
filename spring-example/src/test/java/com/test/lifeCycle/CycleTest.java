@@ -3,7 +3,7 @@ package com.test.lifeCycle;
 import com.test.lifeCycle.bean.*;
 import com.test.lifeCycle.config.LifeCycleConfig;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @Slf4j(topic = "e")
